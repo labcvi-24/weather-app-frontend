@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  gap: 32px;
+}
+
+.navigation__link {
+  padding: 14px 34px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: all .35s ease;
+}
+
+.navigation__link:hover {
+  border: 2px solid #4A90E2;
+  background: rgba(74, 144, 226, .08);
+  color: #4A90E2;
+}
+
+.navigation__link_active {
+  border: 2px solid #4A90E2;
+  background: rgba(74, 144, 226, .08);
+  color: #4A90E2;
+}

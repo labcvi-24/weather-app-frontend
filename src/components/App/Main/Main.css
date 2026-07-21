@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: calc(100vh - 180px);
+}
+
+.hero {
+  width: 100%;
+  max-width: 700px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero__title {
+  margin: 0;
+
+  font-size: 3rem;
+  font-weight: 700;
+
+  color: #222;
+}
+
+.hero__subtitle {
+  margin: 0;
+
+  font-size: 1.2rem;
+  line-height: 1.7;
+
+  color: #666;
+}
