@@ -14,6 +14,7 @@ function Weather() {
   const [weather, setWeather] = useState(null);
   const [places, setPlaces] = useState([]);
   const [visiblePlaces, setVisiblePlaces] = useState(3);
+  const [error, setError] = useState("");
 
   const [loading, setLoading] = useState(false);
 
@@ -30,6 +31,7 @@ function handleSearch(city) {
     if (!city) return;
 
     setLoading(true);
+    setError("");
     
     getWeather(city)
     .then((data) => {
@@ -43,9 +45,7 @@ function handleSearch(city) {
       return getPlaces(data.name, categories);
     })
     .then((placesData) => {
-      console.log("PLACES");
       placesData.forEach((place) => {
-        console.log(place.category);
       });
 
       setPlaces(placesData);
@@ -53,9 +53,12 @@ function handleSearch(city) {
       setLoading(false);
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
+      setError(
+        "Sorry, something went wrong while processing your request. Please try again later."
+      );
       setLoading(false);
-    });
+    }); 
   }, [city]);
   
 
@@ -70,6 +73,12 @@ function handleSearch(city) {
       </section>
 
       {loading && <Preloader />}
+
+      {!loading && error && (
+        <p className="weather__error">
+          {error}
+          </p>
+      )}
       
       {!loading && weather && (
         <WeatherCard weather={weather}/>

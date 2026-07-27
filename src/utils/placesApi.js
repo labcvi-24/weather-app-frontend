@@ -44,8 +44,6 @@ export function getPlaces(city, categories) {
             return data;
           }
 
-          console.log("No places in 5km. Trying 15km...");
-
           return fetchPlaces(lat, lon, categories, 15000);
 
         });
@@ -53,8 +51,6 @@ export function getPlaces(city, categories) {
     })
     .then((data) => {
 
-      console.log("GEOAPIFY RESPONSE");
-      console.log(data.features);
 
       return data.features.map((place) => ({
 

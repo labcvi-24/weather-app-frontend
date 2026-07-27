@@ -2,7 +2,7 @@ import PlaceCard from "../PlaceCard/PlaceCard";
 import "./PlacesSection.css";
 
 function PlacesSection({ places }) {
-console.log(places);
+
   return (
 
     <section className="places">
