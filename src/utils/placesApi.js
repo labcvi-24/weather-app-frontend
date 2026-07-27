@@ -22,7 +22,7 @@ function getCoordinates(city) {
 
 function fetchPlaces(lat, lon, categories, radius) {
   return fetch(
-    `${PLACES_URL}?categories=${categories.join(",")}&filter=circle:${lon},${lat},${radius}&limit=4&apiKey=${API_KEY}`
+    `${PLACES_URL}?categories=${categories.join(",")}&filter=circle:${lon},${lat},${radius}&limit=15&apiKey=${API_KEY}`
   )
     .then((res) => {
       if (!res.ok) {
