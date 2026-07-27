@@ -8,22 +8,58 @@
   border: 2px solid transparent;
   border-radius: 999px;
 
-  color: #222;
+  color: #2F2F2F;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
 
-  transition: all .35s ease;
+  transition: .25s;
 }
 
 .navigation__link:hover {
-  border: 2px solid #4A90E2;
+  border: 2px solid #7C3AED;
   background: rgba(74, 144, 226, .08);
-  color: #4A90E2;
+  color: #7C3AED;
 }
 
 .navigation__link_active {
-  border: 2px solid #4A90E2;
+  border: 2px solid #8B5CF6;
   background: rgba(74, 144, 226, .08);
-  color: #4A90E2;
+  color: #8B5CF6;
+}
+
+@media (max-width:768px){
+
+    .navigation{
+
+        gap:12px;
+
+    }
+
+    .navigation__link{
+
+        padding:12px 20px;
+
+        font-size:16px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .navigation{
+
+        gap:8px;
+
+    }
+
+    .navigation__link{
+
+        padding:10px 16px;
+
+        font-size:15px;
+
+    }
+
 }

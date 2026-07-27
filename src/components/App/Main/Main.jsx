@@ -12,15 +12,22 @@ function Main() {
   return (
     <main className="main">
       <section className="hero">
-        <h1 className="hero__title">
-          Welcome to Weather Mood
-        </h1>
+        
+        <div className="hero__overlay">
+          <h1 className="hero__title">
+            Welcome to Weather Mood
+          </h1>
 
-        <p className="hero__subtitle">
-          Discover the best plan according to today's weather.
-        </p>
+          <p className="hero__subtitle">
+            Discover the best plan according to today's weather
+          </p>
 
-        <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch} />
+
+        </div>
+        
+
+        
       </section>
     </main>
   );
