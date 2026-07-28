@@ -1,0 +1,18 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  overflow-x:hidden;
+  margin:0;
+  background:#FAFAFC;
+  color:#2F2F2F;
+  font-family: "Inter", system-ui, sans-serif;
+}
