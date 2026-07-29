@@ -50,8 +50,9 @@ VITE_GEOAPIFY_API_KEY=your_geoapify_api_key
 npm run dev
 ```
 
-The application will be available at:
+### 6. deployed application
 
-```
-http://localhost:5173
+```github pages
+
+https://labcvi-24.github.io/weather-app-frontend/
 ```
